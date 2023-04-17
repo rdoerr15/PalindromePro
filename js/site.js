@@ -1,118 +1,43 @@
-function add() {
-  //get the numbers
-  let numberOne = document.getElementById("firstNumber").value;
-  let numberTwo = document.getElementById("secondNumber").value;
+//controller function
+function getValues() {
+  //get the user's input
+  //decide what to do with it
+  let userInput = document.getElementById("message").value;
 
-  //turn them into integers
-  numberOne = parseFloat(numberOne);
-  numberTwo = parseFloat(numberTwo);
+  let reversedInput = checkForPalindrome(
+    userInput.toLowerCase().replaceAll(" ", "")
+  );
 
-  //add the first and second numbers
-  let sum = numberOne + numberTwo;
-
-  //display the result
-  let resultsDiv = document.getElementById("results");
-  resultsDiv.innerHTML = sum;
+  displayResults(reversedInput);;
 }
 
-function subtract() {
-  let numberOne = document.getElementById("firstNumber").value;
-  let numberTwo = document.getElementById("secondNumber").value;
+//business/logic function
+function checkForPalindrome(input) {
+  //take a string, return it in reverse
+  let inputLength = input.length;
 
-  numberOne = parseFloat(numberOne);
-  numberTwo = parseFloat(numberTwo);
-
-  let difference = numberOne - numberTwo;
-
-  let resultsDiv = document.getElementById("results");
-  resultsDiv.innerHTML = difference;
-}
-
-function multiply() {
-  let numberOne = document.getElementById("firstNumber").value;
-  let numberTwo = document.getElementById("secondNumber").value;
-
-  numberOne = parseFloat(numberOne);
-  numberTwo = parseFloat(numberTwo);
-
-  let product = numberOne * numberTwo;
-
-  let resultsDiv = document.getElementById("results");
-  resultsDiv.innerHTML = product;
-}
-
-function divide() {
-  let numberOne = document.getElementById("firstNumber").value;
-  let numberTwo = document.getElementById("secondNumber").value;
-
-  numberOne = parseFloat(numberOne);
-  numberTwo = parseFloat(numberTwo);
-
-  let quotient = numberOne / numberTwo;
-
-    if (numberTwo == 0) {
-        quotient = "Cannot divide by zero!";
+  for (let i = 0; i < inputLength / 2; i++) {
+    if (input[i] !== input[inputLength - 1 - i]) {
+      return '';
     }
-
-  let resultsDiv = document.getElementById("results");
-  resultsDiv.innerHTML = quotient;
+  }
+  return input;
 }
 
-function sumAll() {
-    let numberString = document.getElementById('numberSeries').value;
-    //numberString = '12345'
-
-    let numberArray = numberString.split('')
-    //numberArray = ['1', '2', '3', '3', '4', '5']
-    
-    let sum = 0; //running total
-
-    for (let i = 0; i < numberArray.length; i++) {
-        
-        let currentNumber = numberArray[i];
-        //currentNumber = '1'
-        
-        currentNumber = parseInt(currentNumber);
-        //currentNumber = 1
-
-        sum = sum + currentNumber;
-    }
-
-    let resultsDiv = document.getElementById('results');
-    resultsDiv.innerText = sum;
-}
-
-function multiplyAll() {
-  let numberString = document.getElementById('numberSeries').value;
-  //numberString = '12345'
-
-  let numberArray = numberString.split('');
-  //numberArray = ['1', '2', '3', '3', '4', '5']
-
-  let sum = 1; //running total
-
-  for (let i = 0; i < numberArray.length; i++) {
-    let currentNumber = numberArray[i];
-    //currentNumber = '1'
-
-    currentNumber = parseInt(currentNumber);
-    //currentNumber = 1
-
-    sum = sum * currentNumber;
+//view function
+function displayResults(revInput) {
+  //show the string on the page
+  if (revInput) {
+    document.getElementById('msg').textContent = revInput;
+  } else {
+    document.getElementById('msg2').textContent = revInput;
   }
 
-  let resultsDiv = document.getElementById('results');
-  resultsDiv.innerText = sum;
-}
-
-function minimum() {
-
-}
-
-function maximum() {
-
-}
-
-function average() {
-
+  if (revInput) {
+    document.getElementById("alert").classList.remove("d-none");
+    document.getElementById("alert2").classList.add("d-none");
+  } else {
+    document.getElementById("alert2").classList.remove("d-none");
+    document.getElementById("alert").classList.add("d-none");
+  }
 }
