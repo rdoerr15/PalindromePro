@@ -12,7 +12,7 @@
     --rd-dark-color: #274472; 
     --rd-light-color: #deeefb;
     --rd-background-color: #A3C9D9;
-    --rd-oceangreen-color: #039485; 
+    --rd-oceangreen-color: #19BFB7; 
     --rd-sand-color: #C9B48B;
     
     /* navbar colors */
@@ -59,7 +59,7 @@ footer {
     list-style-type: none;
 }
 .checklist>li i {
-    color:var(--rd-oceangreen-color);
+    color: #8C52FF;
     padding-right: .5rem;
 }
 
@@ -82,6 +82,23 @@ footer {
 .navbar-toggler {
     color: var(--rd-nav-toggler-glow);
     /*border-color: */
+}
+
+.navLogo {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #8C52FF;
+    border-color: black;
+    transition: all .5s;
+}
+.btn-primary:hover {
+    color: black;
+    background-color: var(--rd-oceangreen-color);
+    border-color: black;
+    transition: all .5s;
 }
 
 #mainNav {

@@ -2,6 +2,10 @@
 function getValues() {
   //get the user's input
   //decide what to do with it
+  let alertBox = document.getElementById("alert");
+  alertBox.classList.remove("alert-danger");
+  alertBox.classList.remove("alert-success");
+  alertBox.classList.add("d-none");
 
   let userInput = document.getElementById("message").value;
 
@@ -14,7 +18,7 @@ function getValues() {
     Swal.fire({
       icon: "error",
       backdrop: false,
-      title: "Taco Cat",
+      title: "PalindromePro",
       text: "You must enter an input to check for palindrome!",
     });
   }
@@ -65,9 +69,4 @@ function displayResult(resultMessage, isPalindrome) {
 
   document.getElementById("msg").textContent = resultMessage;
   document.getElementById("alert").remove("d-none");
-
-  let alertBox = document.getElementById("alert");
-  alertBox.classList.remove("alert-danger");
-  alertBox.classList.remove("alert-success");
-  alertBox.classList.add("d-none");
 }

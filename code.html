@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taco Cat</title>
+    <title>PalindromePro</title>
 
     <!--bootsrap css-->
     <link
@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="/css/site.css" />
 
     <!--favicon-->
-    <link rel="shortcut icon" href="/img/logoLightBG.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/PalindromeProNavLogo.png" type="image/x-icon" />
   </head>
 
   <body data-bs-spy="scroll" data-bs-target="#mainNav">
@@ -46,8 +46,8 @@
       <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
         <div class="container">
           <a class="navbar-brand" href="/index.html">
-            <img src="/img/logoDarkBG.jpg" height="50" />
-            Taco Cat
+            <img src="/img/PalindromeProNavLogo.png" class="navLogo" height="50" />
+            PalindromePro
           </a>
           <button
             class="navbar-toggler"
@@ -74,12 +74,13 @@
                 <a class="nav-link active" href="/code.html">The Code</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://github.com">The Repo</a>
+                <a class="nav-link" href="https://github.com/rdoerr15/PalindromePro" target="_blank">The Repo</a>
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link"
                   href="https://ryandoerr-portfolio.netlify.app/"
+                  target="_blank"
                   >About</a
                 >
               </li>
@@ -118,7 +119,7 @@ function getValues() {
   Swal.fire({
     icon: 'error',
     backdrop: false,
-    title: 'Taco Cat',
+    title: 'PalindromePro',
     text: 'You must enter an input to check for palindrome!'
     });
 
@@ -191,13 +192,24 @@ resultMessage += 'your message reversed is' + resultMessage;
                 </pre>
         </div>
         <div class="col-12 col-lg-4">
-          <p>The code is structured in 4 separate functions.     </p>
+          <p>The code is structured in 4 separate functions.</p>
           <h5>getValues</h5>
-          <p>This first function grabs the message from the user input so we have something to work with.</p>
+          <p>
+            This first function grabs the message from the user input so we have
+            something to work with.
+          </p>
           <h5>checkForPalindrome</h5>
-          <p>Secondly, this function checks the input to see if it is actually a palindrome. It does this by calling the reverseString function(the 3rd function), and checking to see if the reverse is identical to the original input.</p>
+          <p>
+            Secondly, this function checks the input to see if it is actually a
+            palindrome. It does this by calling the reverseString function(the
+            3rd function), and checking to see if the reverse is identical to
+            the original input.
+          </p>
           <h5>displayResuts</h5>
-          <p>Finally, this last function actually shows our results on the web page.</p>
+          <p>
+            Finally, this last function actually shows our results on the web
+            page.
+          </p>
         </div>
       </div>
     </main>
@@ -211,17 +223,13 @@ resultMessage += 'your message reversed is' + resultMessage;
             <img src="/img/logoDarkBG.jpg" height="50" />
           </div>
           <div class="col text-md-end">
-            <a href="https://linkedin.com/my-profile"
+            <a
+              href="https://www.linkedin.com/in/ryan-doerr-39a23626b/"
+              target="_blank"
               ><i class="socialicons bi bi-linkedin p-2"></i
             ></a>
-            <a href="https://github.com/my-profile"
+            <a href="https://github.com/rdoerr15" target="_blank"
               ><i class="socialicons bi bi-github p-2"></i
-            ></a>
-            <a href="https://twitter.com/my-profile"
-              ><i class="socialicons bi bi-twitter p-2"></i
-            ></a>
-            <a href="https://youtube.com/my-profile"
-              ><i class="socialicons bi bi-youtube p-2"></i
             ></a>
           </div>
           <div class="col text-light order-md-first text-md-start">

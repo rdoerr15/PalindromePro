@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taco Cat</title>
+    <title>PalindromePro</title>
 
     <!--bootsrap css-->
     <link
@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="/css/site.css" />
 
     <!--favicon-->
-    <link rel="shortcut icon" href="/img/logoLightBG.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/PalindromeProNavLogo.png" type="image/x-icon" />
   </head>
 
   <body data-bs-spy="scroll" data-bs-target="#mainNav">
@@ -45,8 +45,8 @@
       <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
         <div class="container">
           <a class="navbar-brand" href="/index.html">
-            <img src="/img/logoDarkBG.jpg" height="50" />
-            Taco Cat
+            <img src="/img/PalindromeProNavLogo.png" class="navLogo" height="50" />
+            PalindromePro
           </a>
           <button
             class="navbar-toggler"
@@ -73,12 +73,13 @@
                 <a class="nav-link" href="/code.html">The Code</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://github.com">The Repo</a>
+                <a class="nav-link" href="https://github.com/rdoerr15/PalindromePro" target="_blank">The Repo</a>
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link"
                   href="https://ryandoerr-portfolio.netlify.app/"
+                  target="_blank"
                   >About</a
                 >
               </li>
@@ -95,17 +96,14 @@
     <main class="container mt-3">
       <div class="row row-cols-1 row-cols-md-2 gy-3">
         <div class="col">
-          <h1 class="display-5 border-bottom border-2 mb-3">Taco Cat</h1>
+          <h1 class="display-5 border-bottom border-2 mb-3">Instructions</h1>
           <h4 class="lead">
-            A palindrome is a word,
-            phrase, or sequence that reads the same backward as forward. Write a
-            program the checks if the phrase entered is a palindrome.
+            Type in a word or phrase to check if it's a palindrome. For
+            example, racecar and kayak are both palindromes.
           </h4>
         </div>
         <div class="col pt-5">
-          <h4 class="lead my-1">
-            Enter a phrase or word to check 
-          </h4>
+          <h4 class="lead my-1">Enter a phrase or word to check</h4>
           <input
             class="form-control my-1"
             type="text"
@@ -113,16 +111,11 @@
             id="message"
           />
           <button class="btn btn-primary my-1" id="btnSubmit">Check It!</button>
-          <hr>
+          <hr />
           <div class="alert alert-success mt-5 d-none" id="alert" role="alert">
-              <h4 class="alert-heading">Success! Your input is a palindrome!</h4>
-              <hr>
-              <p class="mb-0" id="msg"></p>
-          </div>
-          <div class="alert2 alert-warning mt-5 d-none" id="alert2" role="alert2">
-              <h4 class="alert-heading">Sorry! Your input is not a palindrome.</h4>
-              <hr>
-              <p class="mb-0" id="msg2"></p>
+            <h4 class="alert-heading">Success! Your input is a palindrome!</h4>
+            <hr />
+            <p class="mb-0" id="msg"></p>
           </div>
         </div>
       </div>
@@ -137,17 +130,13 @@
             <img src="/img/logoDarkBG.jpg" height="50" />
           </div>
           <div class="col text-md-end">
-            <a href="https://linkedin.com/my-profile"
+            <a
+              href="https://www.linkedin.com/in/ryan-doerr-39a23626b/"
+              target="_blank"
               ><i class="socialicons bi bi-linkedin p-2"></i
             ></a>
-            <a href="https://github.com/my-profile"
+            <a href="https://github.com/rdoerr15" target="_blank"
               ><i class="socialicons bi bi-github p-2"></i
-            ></a>
-            <a href="https://twitter.com/my-profile"
-              ><i class="socialicons bi bi-twitter p-2"></i
-            ></a>
-            <a href="https://youtube.com/my-profile"
-              ><i class="socialicons bi bi-youtube p-2"></i
             ></a>
           </div>
           <div class="col text-light order-md-first text-md-start">
@@ -156,23 +145,21 @@
         </div>
       </div>
     </footer>
+
+    <!--bootstrap js-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--sweet alerts-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- App JS -->
+    <script src="/js/site.js"></script>
+    <script>
+      document.getElementById("btnSubmit").addEventListener("click", getValues);
+    </script>
   </body>
-
-  <!--bootstrap js-->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"
-  ></script>
-
-  <!--sweet alerts-->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  <!-- App JS -->
-  <script src="/js/site.js"></script>
-  <script>
-    document
-      .getElementById("btnSubmit")
-      .addEventListener("click", getValues);
-  </script>
 </html>
