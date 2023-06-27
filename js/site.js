@@ -52,21 +52,22 @@ function reverseString(message) {
 }
 
 //view function
-function displayResult(resultMessage, isPalindrome) {
+function displayResult(reversedInput, isPalindrome) {
   //show the string on the page
   let resultMessage = "";
 
   let alertClass = isPalindrome ? "alert-success" : "alert-danger";
+  let alertBox = document.getElementById("alert")
   alertBox.classList.add(alertClass);
 
   if (isPalindrome) {
-    resultMessage = "You enetred a palindrome!";
+    resultMessage = "You entered a palindrome!";
   } else {
     resultMessage = "You did not enter a plaindrome!";
   }
 
-  resultMessage += "your message reversed is" + resultMessage;
+  resultMessage += " Your message reversed is " + reversedInput;
 
   document.getElementById("msg").textContent = resultMessage;
-  document.getElementById("alert").remove("d-none");
+  alertBox.classList.remove("d-none");
 }
